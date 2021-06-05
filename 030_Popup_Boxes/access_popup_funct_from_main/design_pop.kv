@@ -1,0 +1,32 @@
+<MyPopup@Popup>
+    auto_dismiss: True # click out to dismiss
+    size_hint: .5,.5
+    pos_hint: { 'x' : 0.2, 'top': 0.9}
+    title: 'Box layout popup_custom_functions'
+
+    # popups only allow a single widget from within
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label: 
+            text: '<default_text_to_change >'
+            id: lbl
+
+        Button:
+            text: "press_to_change_label_txt"
+            id: affecter
+            on_press:app.root.modify('hello label changedi')
+
+        Button:
+            text: 'dismiss_btn'
+            id: btn
+            on_release: root.dismiss()
+<MyLayout>
+    BoxLayout:
+        Button:
+            # on being pressed it will give the label and the button a text
+            # name
+            on_press: root.open_popup(btn='A', lbl='B')
+
+   
+

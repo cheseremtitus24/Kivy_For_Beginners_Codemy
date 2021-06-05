@@ -1,0 +1,38 @@
+<MyLayout>
+    do_default_tab: False # don't want a default tab
+
+    size_hint: .5, .5
+    pos_hint: {'center_x': .5, 'center_y': .5}
+
+    #Setting the tab widget placement
+    tab_pos: 'left_top'
+    # left_top,left_mid, left_bottom, 
+    # right_top, right_mid, right_bottom
+    # top_left, top_mid, top_right
+    # bottom_left, bottom_mid, bottom_right
+
+    TabbedPanelItem:
+        text: 'Tab 1' # tab title
+        Label:
+            text: "Hello World!"
+
+
+    TabbedPanelItem:
+        text: "Tab 2"
+        BoxLayout:
+            orientation: 'vertical'
+            size: root.width, root.height
+
+            Label: 
+                text: "Press the Button -->"
+
+            Button:
+                text: "Click me"
+
+
+    TabbedPanelItem:
+        text: "Tab 3"
+        Label:
+            text: "This is an image window "
+    
+    

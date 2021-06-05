@@ -1,0 +1,50 @@
+# File: clock.kv
+#Defining Default Widget Properties
+<Label>:
+    font_name: 'Roboto'
+    font_size: 60
+    markup: True
+
+<RobotButton@Button>:
+    background_normal: 'icons/button_normal.png'
+    background_down: 'icons/button_down.png'
+    border: (2, 2, 2, 2)
+    
+
+
+    
+<MyLayout>
+#defining Default widget properties
+
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        Label:
+            id: time
+            text: '[b]00[/b]:00:00'
+
+        BoxLayout:
+            height: 90
+            orientation: 'horizontal'
+            padding: 20
+            spacing: 20
+            size_hint:( 1, None) # set to full width but leave height undefined
+            RobotButton:
+                id: start_stop
+                text: 'Start'
+                on_press: app.start_stop()
+
+            
+            RobotButton:
+                text: 'Reset'
+                id: reset
+                on_press: app.reset()
+                background_normal:'icons/red_button_normal.png'
+                background_down: 'icons/red_button_down.png'
+
+
+        Label:
+            id: stopwatch
+            text: '00:00.[size=40]00[/size]'#Defining a custom size
