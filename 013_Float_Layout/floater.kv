@@ -1,0 +1,34 @@
+<Button>
+    font_size: 32
+    size_hint: (0.3, 0.3) # size of each widget covers 30 percent of screen
+
+<MyLayout>
+    
+    FloatLayout:
+        size: root.width, root.height
+
+        Button: # the point to be position is the top-left widget corner
+            text: "Top Left"
+            # {'x','y','bottom','left','right','top'}
+            pos_hint: {'x':0,'top':1}
+
+        Button: 
+            text: "Top Right"
+            # {'x','y','bottom','left','right','top'}
+            pos_hint: {'x':.7, 'top':1}
+
+        Button: 
+            text: "Bottom Left"
+            # {'x','y','bottom','left','right','top'}
+            pos_hint: {'x':0, 'bottom':0}
+
+        Button: 
+            text: "Bottom Right"
+            # {'x','y','bottom','left','right','top'}
+            pos_hint: {'x': .7, 'bottom':0}
+
+
+        Button: 
+            text: "Center"
+            # {'x','y','bottom','left','right','top'}
+            pos_hint: {'x': .35, 'y':.35}

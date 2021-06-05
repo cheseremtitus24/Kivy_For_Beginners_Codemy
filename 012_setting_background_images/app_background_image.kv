@@ -1,0 +1,46 @@
+# this file will set a background image
+<MyLayout>
+#Default widget values are set here
+#Setting a default color for your app
+	BoxLayout:
+		#setting the background image of the Boxlayout
+		
+		
+		orientation: "vertical"
+		size: root.width, root.height
+		padding: 50
+		spacing: 10
+
+		Image:
+			source: "bmts-logo-web-01.png"
+			#if the image is small we can stretch it with the following	
+			allow_stretch: True
+			keep_ration: False
+	
+		Label:
+			text: "Name"
+			background_color: (0,0,1,1)
+			font_size: 42
+			# Setting the label background properties requires setting a canvas as the background for the label
+			canvas.before:
+				Color:
+					rgba: self.background_color
+				Rectangle:
+					size: self.size
+					pos: self.pos
+			#Setting the label text properties
+			color: (0,1,0,1)
+			bold: True
+			italic: True
+			outline_color: (0,0,0) # also set the width
+			outline_width: 4
+
+		TextInput:
+			multiline: False
+		Button:
+			text: "Clear"
+		
+
+		
+
+	

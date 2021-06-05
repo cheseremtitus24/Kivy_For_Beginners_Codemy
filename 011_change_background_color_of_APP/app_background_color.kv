@@ -1,0 +1,46 @@
+<MyLayout>
+#Default widget values are set here
+#Setting a default color for your app
+	canvas.before:
+		#This will override the app color set by the main.build function defn
+		Color:
+			rgba: (240,255, 240/255,240/255,1) #setting app bacground as grey
+		Rectangle:
+			pos: self.pos
+			size: self.size
+
+	BoxLayout:
+		
+		orientation: "vertical"
+		size: root.width, root.height
+		padding: 50
+		spacing: 10
+
+	
+		Label:
+			text: "Name"
+			background_color: (0,0,1,1)
+			font_size: 42
+			# Setting the label background properties requires setting a canvas as the background for the label
+			canvas.before:
+				Color:
+					rgba: self.background_color
+				Rectangle:
+					size: self.size
+					pos: self.pos
+			#Setting the label text properties
+			color: (0,1,0,1)
+			bold: True
+			italic: True
+			outline_color: (0,0,0) # also set the width
+			outline_width: 4
+
+		TextInput:
+			multiline: False
+		Button:
+			text: "Clear"
+		
+
+		
+
+	

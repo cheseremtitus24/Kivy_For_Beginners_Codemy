@@ -1,0 +1,29 @@
+<MyLayout>
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 50
+        spacing: 20
+
+        Button:
+            text: 'Hello World'
+            background_normal: ''
+            background_color: (0,1,0,1)
+
+        Button:
+            background_normal: ''
+            background_color: (0,0,0,0)
+            text: 'Submit'
+            canvas.before:
+                Color:
+                    rgba: (48/255,84/255,150/255,1)
+                RoundedRectangle:
+                    radius: [58]
+                    pos: self.pos
+                    size: self.size
+
+
+
+
+

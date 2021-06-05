@@ -1,0 +1,19 @@
+<MyLayout>
+    #define variables
+    slide_text: slider_label # aliasing label text
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height #expand thro' entire app
+
+        Label:
+            id: slider_label
+            text: "Slide The Slider"
+            font_size: 32
+
+        Slider: # Defining the widget
+            min: 1
+            max: 50
+            step: 1
+            orientation: "horizontal" # can also be 'vertical'
+            on_value: root.slide_it(*args) # pass in name of slider and value
+            
