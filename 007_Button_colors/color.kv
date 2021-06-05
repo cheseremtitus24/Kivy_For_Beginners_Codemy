@@ -1,0 +1,44 @@
+#:import utils kivy.utils
+<MyGridLayout>
+
+    name:name
+    pizza:pizza
+    color:color
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text : "Name"
+            TextInput:
+                id:name
+                multiline : False
+                background_normal:''
+                background_color: utils.get_color_from_hex('#fa00df')
+            Label:
+                text : "Favorite Pizza"
+            TextInput:
+                id:pizza
+                multiline:False
+            Label:
+                text : "Favorite Color"
+            TextInput:
+                id:color
+                multiline:False
+
+        Button:
+            text:"Submit"
+            font_size:32
+            on_press:root.press_func()
+            # Color selection makes use of RGB-A of which the A is for Opacity
+
+            #removes the background gray for e.g. a button
+            background_normal:''
+            background_color: utils.get_color_from_hex('#fa00df')
+
+            ## The more hectic to do is the following
+            #background_color:(238/255.0,250/255.0,0/255.0,1)

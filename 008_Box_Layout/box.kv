@@ -1,0 +1,36 @@
+<MyLayout>
+	BoxLayout:
+		orientation: "horizontal" # can either be horizontal or vertical
+		
+
+		#Ensures that the widget cover the entire screen size
+		size: root.width, root.height
+		
+		
+		#Adding spacing between widgets on all button elements
+		spacing: 20
+
+		#adding padding around the widgets
+		padding : 50
+
+
+		
+		Button: 
+			text: "Hello World"
+			#center+fixed_size
+			
+			#a. setting widget position
+			#pos_hint: {'center_x',0.5} #is a Dictionar y # center in the X_axis and halfway across the screen  
+			size_hint: (None, None)  #You have to set this in order to set width and height of widget
+
+			width: 100
+			height: 50
+
+			#Center+dynamic size
+			#pos_hint: {'center_x', 0.5} 
+			#size_hint: (0.5,0.5)
+
+		Button:
+			text: "Goodbye World"
+		Button:
+			text: "Heiyaaa World"	
