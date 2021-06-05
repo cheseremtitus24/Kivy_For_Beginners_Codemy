@@ -1,0 +1,20 @@
+<MyLayout>
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        paddding: 20
+        spacing: 20
+
+        Label:
+            text: "Turn ON/OFF"
+            id: my_label
+            font_size: 32
+
+        Switch:
+            id: my_switch
+            active: True
+            disabled: False
+            font_size: 32
+            on_active: root.switch_click(self, self.active)
+

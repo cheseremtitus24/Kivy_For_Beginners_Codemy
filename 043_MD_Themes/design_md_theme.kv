@@ -1,0 +1,26 @@
+<MyLayout>
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        paddding: 20
+        spacing: 20
+        
+
+        Screen:
+
+            MDRectangleFlatButton:
+                text: "First Button"
+                pos_hint: {"center_x": .5, "center_y": .8}
+                #md_bg_color: app.theme_cls.primary_light
+
+            MDRaisedButton:
+                text: "First Button"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+
+            MDRaisedButton:
+                text: "First Button"
+                pos_hint: {"center_x": .5, "center_y": .3}
+                md_bg_color: app.theme_cls.primary_dark
+

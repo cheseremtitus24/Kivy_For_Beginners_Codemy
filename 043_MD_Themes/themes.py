@@ -4,13 +4,10 @@ from kivy.lang import Builder
 from kivymd.app import MDApp
 
 #Design Our .kv design file
-design= Builder.load_file('design_md_Login.kv')
+design= Builder.load_file('design_md_theme.kv')
 
 class MyLayout(Widget):
-    def logger(self):
-        self.ids.notify.text = 'sup {}'.format(self.ids.user.text)
-    def clear(self):
-        self.ids.welcome_label.text = "WELCOME"
+    pass
 
     '''
     Red,Pink, Purple, DeepPurple
@@ -20,13 +17,13 @@ class MyLayout(Widget):
     Brown, Gray, BlueGray
     Dark
     '''
-class MdLoginApp(MDApp):
+class MdthemesApp(MDApp):
     def build(self):
-        self.theme_cls.theme_style = "Dark"
-        self.theme_cls.primary_palette = "Teal"
+        self.theme_cls.theme_style = "Light"
+        self.theme_cls.primary_palette = "Indigo"
         self.theme_cls.accent_palette = "Green"
         return MyLayout()
 
 
 if __name__ == '__main__':
-    MdLoginApp().run()
+    MdthemesApp().run()

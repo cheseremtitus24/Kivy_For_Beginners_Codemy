@@ -1,0 +1,31 @@
+<MyLayout>
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 20
+
+        Label:
+            id: my_label
+            text: "Hello world!"
+            font_size: 32
+            color: 0,0,0,1
+
+        Button:
+            id: my_button
+            #setting the button to the size of button image
+            size_hint: .15,.2
+            #setting button position to center of screen
+            pos_hint: {'center_x': 0.5}
+            background_normal:'' 
+            on_press: root.hello_on()
+            on_release: root.hello_off()
+            
+            Image:
+                id: my_image
+                source: 'icons/login_normal.png'
+                # Setting the image to be at center of button
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+

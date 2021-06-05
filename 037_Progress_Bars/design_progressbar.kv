@@ -1,0 +1,27 @@
+<MyLayout>
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        paddding: 20
+        spacing: 20
+        
+                 
+        Label:
+            id: my_label
+            font_size: 32
+
+
+
+        ProgressBar:
+            id: my_progress_bar
+            value: 0
+            min: 0
+            max: 1
+            pos_hint: {'x': .1}
+            size_hint_x: .8
+
+        Button:
+            text: "update progress"
+            on_press: app.root.press_it()
+        
